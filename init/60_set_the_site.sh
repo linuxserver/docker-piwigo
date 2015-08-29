@@ -13,4 +13,5 @@ fi
 
 if [ ! -f "/config/www/gallery/local/config/config.inc.php" ]; then
 cp /config/www/gallery/include/config_default.inc.php /config/www/gallery/local/config/config.inc.php
+chown abc:abc /config/www/gallery/local/config/config.inc.php
 fi
