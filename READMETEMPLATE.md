@@ -30,6 +30,9 @@ It is based on phusion-baseimage with ssh removed, for shell access whilst the c
 Part of what makes our containers work so well is by allowing you to specify your own `PUID` and `PGID`. This avoids nasty permissions errors with relation to data volumes (`-v` flags). When an application is installed on the host OS it is normally added to the common group called users, Docker apps due to the nature of the technology can't be added to this group. So we added this feature to let you easily choose when running your containers.
 
 ## Setting up the application 
+
+You must create a user and database for piwigo to use in a mysql/mariadb server. In the setup page for database, use the ip address rather than hostname...
+
 A basic apache configuration file can be found in /config/apache/site-confs , edit the file to enable ssl (port 443 by default), set servername etc.. 
 Self-signed keys are generated the first time you run the container and can be found in /config/keys , if needed, you can replace them with your own.
 
