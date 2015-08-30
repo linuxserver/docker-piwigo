@@ -21,6 +21,7 @@ docker create --name=piwigo -v /etc/localtime:/etc/localtime:ro -v <path to data
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 * `-e TZ` for setting timezone information, eg Europe/London
+
 It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it piwigo /bin/bash`.
 
 ### User / Group Identifiers
