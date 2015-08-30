@@ -3,7 +3,7 @@ FROM linuxserver/baseimage.apache
 MAINTAINER Mark Burford <sparklyballs@gmail.com>
 
 # set install packages as variable
-ENV install_packages="curl \
+ENV APTLIST="curl \
 lynx-cur \
 php5-cgi \
 php5-gd \
@@ -23,8 +23,7 @@ wget"
 
 # install packages
 RUN apt-get update && \
-apt-get install \
-$install_packages -qy && \
+apt-get install $APTLIST -qy && \
 
 # cleanup 
 apt-get clean -y && \
