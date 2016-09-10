@@ -2,6 +2,9 @@ FROM linuxserver/baseimage.apache
 
 MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
 
+# copy sources.list
+COPY sources.list /etc/apt/
+
 # set install packages as variable
 ENV APTLIST="curl \
 lynx-cur \
