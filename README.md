@@ -1,22 +1,40 @@
-![https://linuxserver.io](http://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)
+[linuxserverurl]: https://linuxserver.io
+[forumurl]: https://forum.linuxserver.io
+[ircurl]: https://www.linuxserver.io/index.php/irc/
+[podcasturl]: https://www.linuxserver.io/index.php/category/podcast/
 
-The [LinuxServer.io](http://linuxserver.io) team brings you another quality container release featuring auto-update of dependencies on startup, easy user mapping and community support. Be sure to checkout our [forums](http://forum.linuxserver.io) or for real-time support our [IRC](http://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
+[![linuxserver.io](https://www.linuxserver.io/wp-content/uploads/2015/06/linuxserver_medium.png)][linuxserverurl]
+
+The [LinuxServer.io][linuxserverurl] team brings you another container release featuring easy user mapping and community support. Find us for support at:
+* [forum.linuxserver.io][forumurl]
+* [IRC][ircurl] on freenode at `#linuxserver.io`
+* [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/piwigo
+[![](https://images.microbadger.com/badges/image/linuxserver/piwigo.svg)](http://microbadger.com/images/linuxserver/piwigo "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/piwigo.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/piwigo.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-piwigo)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-piwigo/)
+[hub]: https://hub.docker.com/r/linuxserver/piwigo/
 
 Piwigo is a photo gallery software for the web that comes with powerful features to publish and manage your collection of pictures.
-[Piwigo](http://piwigo.org/)
 
+[![nginx](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/piwigo-banner.png)][piwigourl]
+[piwigourl]: http://piwigo.org/
 ## Usage
 
 ```
-docker create --name=piwigo -v /etc/localtime:/etc/localtime:ro -v <path to data>:/config -e PGID=<gid> -e PUID=<uid>  -e TZ=<timezone> -p 80:80 linuxserver/piwigo
+docker create \
+--name=piwigo \
+-v /etc/localtime:/etc/localtime:ro \
+-v <path to data>:/config \
+-e PGID=<gid> -e PUID=<uid>  \
+-e TZ=<timezone> 
+-p 80:80 \
+linuxserver/piwigo
 ```
 
 **Parameters**
 
 * `-p 80` - webui port *see note below*
-* `-v /etc/localhost` for timesync - *optional*
+* `-v /etc/localtime` for timesync - *optional*
 * `-v /config` - folder to store appdata and config file for piwigo
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
@@ -26,9 +44,14 @@ It is based on phusion-baseimage with ssh removed, for shell access whilst the c
 
 ### User / Group Identifiers
 
-**TL;DR** - The `PGID` and `PUID` values set the user / group you'd like your container to 'run as' to the host OS. This can be a user you've created or even root (not recommended).
+Sometimes when using data volumes (`-v` flags) permissions issues can arise between the host OS and the container. We avoid this issue by allowing you to specify the user `PUID` and group `PGID`. Ensure the data volume directory on the host is owned by the same user you specify and it will "just work" ™.
 
-Part of what makes our containers work so well is by allowing you to specify your own `PUID` and `PGID`. This avoids nasty permissions errors with relation to data volumes (`-v` flags). When an application is installed on the host OS it is normally added to the common group called users, Docker apps due to the nature of the technology can't be added to this group. So we added this feature to let you easily choose when running your containers.
+In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as below:
+
+```
+  $ id <dockeruser>
+    uid=1001(dockeruser) gid=1001(dockergroup) groups=1001(dockergroup)
+```
 
 ## Setting up the application 
 
@@ -46,8 +69,7 @@ The easiest way to edit the configuration file is to enable local files editor f
 * To update piwigo if required, update via the webui
 * To monitor the logs of the container in realtime `docker logs -f piwigo`.
 
-
-
 ## Versions
 
-+ **29.08.2015:** Initial Release.
++ **10.09.16:** Add layer badges to README.
++ **29.08.15:** Initial Release.
