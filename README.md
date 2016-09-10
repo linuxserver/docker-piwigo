@@ -16,7 +16,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 Piwigo is a photo gallery software for the web that comes with powerful features to publish and manage your collection of pictures.
 
-[![nginx](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/piwigo-banner.png)][piwigourl]
+[![piwigo](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/piwigo-banner.png)][piwigourl]
 [piwigourl]: http://piwigo.org/
 ## Usage
 
