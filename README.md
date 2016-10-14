@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # linuxserver/piwigo
-[![](https://images.microbadger.com/badges/image/linuxserver/piwigo.svg)](http://microbadger.com/images/linuxserver/piwigo "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/piwigo.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/piwigo.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-piwigo)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-piwigo/)
+[![](https://images.microbadger.com/badges/version/linuxserver/piwigo.svg)](https://microbadger.com/images/linuxserver/piwigo "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/piwigo.svg)](http://microbadger.com/images/linuxserver/piwigo "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/piwigo.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/piwigo.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-piwigo)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-piwigo/)
 [hub]: https://hub.docker.com/r/linuxserver/piwigo/
 
 Piwigo is a photo gallery software for the web that comes with powerful features to publish and manage your collection of pictures.
@@ -63,13 +63,21 @@ Self-signed keys are generated the first time you run the container and can be f
 The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc....
 
 
-## Updates
+## Info
 
-* To update the packages like apache etc `docker restart piwigo`.
 * To update piwigo if required, update via the webui
 * To monitor the logs of the container in realtime `docker logs -f piwigo`.
 
+* container version number 
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' piwigo`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/piwigo`
+
 ## Versions
 
++ **14-10-16:** Add version layer information.
 + **10.09.16:** Add layer badges to README.
 + **29.08.15:** Initial Release.

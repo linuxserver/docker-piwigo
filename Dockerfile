@@ -1,6 +1,10 @@
 FROM linuxserver/baseimage.apache
+MAINTAINER sparklyballs
 
-MAINTAINER sparklyballs <sparklyballs@linuxserver.io>
+# set version label
+ARG BUILD_DATE
+ARG VERSION
+LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # copy sources.list
 COPY sources.list /etc/apt/
