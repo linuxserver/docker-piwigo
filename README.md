@@ -84,6 +84,6 @@ The easiest way to edit the configuration file is to enable local files editor f
 
 ## Versions
 
-+ **14-10-16:** Add version layer information.
++ **14.10.16:** Add version layer information.
 + **10.09.16:** Add layer badges to README.
 + **29.08.15:** Initial Release.
