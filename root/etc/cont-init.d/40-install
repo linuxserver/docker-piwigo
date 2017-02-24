@@ -1,0 +1,23 @@
+#!/usr/bin/with-contenv bash
+
+# make our folders
+mkdir -p \
+	/config/www/gallery
+
+# install piwigo
+if [ ! -f "/config/www/gallery/index.php" ]; then
+	curl -o /tmp/piwigo.zip -L "http://piwigo.org/download/dlcounter.php?code=latest"
+	unzip -q /tmp/piwigo.zip  -d /tmp
+	mv /tmp/piwigo/* /config/www/gallery
+	rm -rf /tmp/piwigo /tmp/piwigo.zip
+fi
+
+# copy config
+[[ ! -f "/config/www/gallery/local/config/config.inc.php" ]] && \
+	cp /config/www/gallery/include/config_default.inc.php \
+	/config/www/gallery/local/config/config.inc.php
+
+# permissions
+chown -R abc:abc \
+	/config
+
