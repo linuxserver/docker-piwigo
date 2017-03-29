@@ -16,7 +16,9 @@ RUN \
 	gcc \
 	imagemagick-dev \
 	libtool \
-	make \
+	make && \
+ apk add --no-cache --virtual=build-dependencies \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
 	php7-dev && \
 
 # install runtime packages
@@ -24,16 +26,21 @@ RUN \
 	curl \
 	imagemagick \
 	lynx \
+	re2c \
+	unzip \
+	wget && \
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/main \
+	libwebp && \
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
 	php7-apcu \
 	php7-cgi \
 	php7-gd \
 	php7-mysqlnd \
 	php7-pear \
 	php7-xmlrpc \
-	php7-xsl \
-	re2c \
-	unzip \
-	wget && \
+	php7-xsl && \
 
 # install php imagemagick
  mkdir -p \
