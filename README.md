@@ -27,14 +27,14 @@ docker create \
 -v /etc/localtime:/etc/localtime:ro \
 -v <path to data>:/config \
 -e PGID=<gid> -e PUID=<uid>  \
--e TZ=<timezone> 
+-e TZ=<timezone>
 -p 80:80 \
 linuxserver/piwigo
 ```
 
 ## Parameters
 
-`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side.
 For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
 So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
 http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
@@ -60,11 +60,11 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
     uid=1001(dockeruser) gid=1001(dockergroup) groups=1001(dockergroup)
 ```
 
-## Setting up the application 
+## Setting up the application
 
 You must create a user and database for piwigo to use in a mysql/mariadb server. In the setup page for database, use the ip address rather than hostname....
 
-A basic nginx configuration file can be found in /config/nginx/site-confs , edit the file to enable ssl (port 443 by default), set servername etc.. 
+A basic nginx configuration file can be found in /config/nginx/site-confs , edit the file to enable ssl (port 443 by default), set servername etc..
 Self-signed keys are generated the first time you run the container and can be found in /config/keys , if needed, you can replace them with your own.
 
 The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc....
@@ -75,7 +75,7 @@ The easiest way to edit the configuration file is to enable local files editor f
 * To update piwigo if required, update via the webui
 * To monitor the logs of the container in realtime `docker logs -f piwigo`.
 
-* container version number 
+* container version number
 
 `docker inspect -f '{{ index .Config.Labels "build_version" }}' piwigo`
 
@@ -85,6 +85,7 @@ The easiest way to edit the configuration file is to enable local files editor f
 
 ## Versions
 
++ **20.04.17:** Add php7-exif package, thanks iiska
 + **23.02.17:** Rebase to alpine linux 3.5 and nginx.
 + **14.10.16:** Add version layer information.
 + **10.09.16:** Add layer badges to README.
