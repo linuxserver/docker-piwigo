@@ -36,6 +36,7 @@ RUN \
 	--repository http://nl.alpinelinux.org/alpine/edge/community \
 	php7-apcu \
 	php7-cgi \
+	php7-exif \
 	php7-gd \
 	php7-mysqlnd \
 	php7-pear \
