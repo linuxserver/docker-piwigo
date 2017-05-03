@@ -6,66 +6,33 @@ ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# install build packages
+# add repositories
 RUN \
- apk add --no-cache --virtual=build-dependencies \
-	autoconf \
-	curl \
-	file \
-	g++ \
-	gcc \
-	imagemagick-dev \
-	libtool \
-	make && \
- apk add --no-cache --virtual=build-dependencies \
-	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	php7-dev && \
+ echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
+ echo "@community http://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
 
-# install runtime packages
+# install packages
  apk add --no-cache \
 	curl \
-	imagemagick \
 	lynx \
 	re2c \
 	unzip \
 	wget && \
  apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/main \
-	libwebp && \
+	imagemagick@edge \
+	libwebp@edge && \
  apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	php7-apcu \
-	php7-cgi \
-	php7-exif \
-	php7-gd \
-	php7-mysqlnd \
-	php7-pear \
-	php7-xmlrpc \
-	php7-xsl && \
-
-# install php imagemagick
- mkdir -p \
-	/tmp/imagick-src && \
- curl -o \
- /tmp/imagick.tgz -L \
-	https://pecl.php.net/get/imagick && \
- tar xf \
- /tmp/imagick.tgz -C \
-	/tmp/imagick-src --strip-components=1 && \
- cd /tmp/imagick-src && \
- phpize7 && \
- ./configure \
-	--prefix=/usr \
-	--with-php-config=/usr/bin/php-config7 && \
- make && \
- make install && \
- echo "extension=imagick.so" > /etc/php7/conf.d/00_imagick.ini && \
-
-# cleanup
- apk del --purge \
-	build-dependencies && \
- rm -rf \
-	/tmp/*
+	php7-apcu@community \
+	php7-cgi@community \
+	php7-dom@community \
+	php7-exif@community \
+	php7-gd@community \
+	php7-imagick@community \
+	php7-mysqli@community \
+	php7-mysqlnd@community \
+	php7-pear@community \
+	php7-xmlrpc@community \
+	php7-xsl@community
 
 # copy local files
 COPY root/ /
