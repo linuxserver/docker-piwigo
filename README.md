@@ -47,7 +47,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 * `-e PUID` for UserID - see below for explanation
 * `-e TZ` for setting timezone information, eg Europe/London
 
-It is based on phusion-baseimage with ssh removed, for shell access whilst the container is running do `docker exec -it piwigo /bin/bash`.
+It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it piwigo /bin/bash`.
 
 ### User / Group Identifiers
 
@@ -85,6 +85,7 @@ The easiest way to edit the configuration file is to enable local files editor f
 
 ## Versions
 
++ **25.01.18:** Rebase to alpine linux 3.7.
 + **25.05.17:** Rebase to alpine linux 3.6.
 + **03.05.17:** Use repo pinning to better solve dependencies, use repo version of php7-imagick.
 + **20.04.17:** Add php7-exif package, thanks iiska
