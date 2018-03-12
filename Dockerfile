@@ -23,6 +23,7 @@ RUN \
 	php7-pear \
 	php7-xmlrpc \
 	php7-xsl \
+        php7-ldap \
 	re2c \
 	unzip \
 	wget
