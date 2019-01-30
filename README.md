@@ -85,6 +85,7 @@ The easiest way to edit the configuration file is to enable local files editor f
 
 ## Versions
 
++ **28.01.19:** Rebase to alpine linux 3.8 , add pipeline logic and multi arch.
 + **25.01.18:** Rebase to alpine linux 3.7.
 + **25.05.17:** Rebase to alpine linux 3.6.
 + **03.05.17:** Use repo pinning to better solve dependencies, use repo version of php7-imagick.
