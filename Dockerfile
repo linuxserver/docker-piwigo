@@ -19,6 +19,7 @@ RUN \
 	php7-exif \
 	php7-gd \
 	php7-imagick \
+	php7-ldap \
 	php7-mysqli \
 	php7-mysqlnd \
 	php7-pear \
