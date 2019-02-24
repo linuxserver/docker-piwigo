@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.nginx.arm64:3.8
+FROM lsiobase/alpine.nginx.arm64:3.9
 
 # Add qemu to build on x86_64 systems
 COPY qemu-aarch64-static /usr/bin
@@ -22,6 +22,7 @@ RUN \
 	php7-exif \
 	php7-gd \
 	php7-imagick \
+        php7-ldap \
 	php7-mysqli \
 	php7-mysqlnd \
 	php7-pear \
