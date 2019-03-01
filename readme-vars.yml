@@ -43,6 +43,7 @@ app_setup_nginx_reverse_proxy_block: ""
 
 # changelog
 changelogs:
+  - { date: "01.03.19:", desc: "Add php-ctype & php-curl." }
   - { date: "22.02.19:", desc: "Rebasing to alpine 3.9, add php-ldap." }
   - { date: "28.01.19:", desc: "Rebase to alpine linux 3.8 , add pipeline logic and multi arch." }
   - { date: "25.01.18:", desc: "Rebase to alpine linux 3.7." }
