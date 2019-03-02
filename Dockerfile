@@ -9,7 +9,7 @@ LABEL maintainer="sparklyballs"
 
 RUN \
  echo "**** install packages ****" && \
- apk add --no-cache \
+ apk add --no-cache --upgrade \
 	curl \
 	imagemagick \
 	lynx \
