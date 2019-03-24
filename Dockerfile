@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.nginx:3.9
+FROM lsiobase/nginx:3.9
 
 # set version label
 ARG BUILD_DATE
@@ -36,7 +36,6 @@ RUN \
 	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
  echo ${PIWIGO_RELEASE} > /version.txt
-
 
 # copy local files
 COPY root/ /
