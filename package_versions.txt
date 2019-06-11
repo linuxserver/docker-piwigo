@@ -12,7 +12,7 @@ ca-certificates-cacert-20190108-r0
 cairo-1.16.0-r1
 coreutils-8.30-r0
 cups-libs-2.2.10-r0
-curl-7.64.0-r1
+curl-7.64.0-r2
 db-5.3.28-r1
 dbus-libs-1.10.24-r1
 expat-2.2.6-r0
@@ -40,7 +40,7 @@ libbz2-1.0.6-r6
 libc-utils-0.7.1-r0
 libcroco-0.6.12-r1
 libcrypto1.1-1.1.1b-r1
-libcurl-7.64.0-r1
+libcurl-7.64.0-r2
 libedit-20181209.3.1-r0
 libffi-3.2.1-r6
 libgcc-8.3.0-r0
@@ -125,7 +125,7 @@ popt-1.16-r7
 re2c-1.1.1-r0
 readline-7.0.003-r1
 scanelf-1.2.3-r0
-shadow-4.5-r1
+shadow-4.5-r2
 shared-mime-info-1.10-r0
 ssl_client-1.29.3-r10
 tiff-4.0.10-r0
