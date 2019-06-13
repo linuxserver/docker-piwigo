@@ -179,6 +179,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **12.06.19:** - Add ffmpeg and other deps as needed by popular plugins.
 * **23.03.19:** - Switching to new Base images, shift to arm32v7 tag.
 * **01.03.19:** - Add php-ctype & php-curl.
 * **22.02.19:** - Rebasing to alpine 3.9, add php-ldap.
