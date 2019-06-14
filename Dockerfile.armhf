@@ -11,8 +11,12 @@ RUN \
  echo "**** install packages ****" && \
  apk add --no-cache --upgrade \
 	curl \
+	exiftool \
+	ffmpeg \
 	imagemagick \
+	libjpeg-turbo-utils \
 	lynx \
+	mediainfo \
 	php7-apcu \
 	php7-cgi \
 	php7-ctype \
@@ -27,6 +31,7 @@ RUN \
 	php7-pear \
 	php7-xmlrpc \
 	php7-xsl \
+	poppler-utils \
 	re2c \
 	unzip \
 	wget && \
