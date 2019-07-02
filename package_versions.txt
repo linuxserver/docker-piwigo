@@ -17,7 +17,7 @@ curl-7.64.0-r2
 db-5.3.28-r1
 dbus-libs-1.10.28-r0
 exiftool-11.23-r0
-expat-2.2.6-r0
+expat-2.2.7-r0
 ffmpeg-4.0.2-r0
 ffmpeg-libs-4.0.2-r0
 fontconfig-2.13.1-r0
