@@ -6,11 +6,9 @@ mkdir -p \
 
 # install piwigo
 if [ ! -f "/config/www/gallery/index.php" ]; then
-	PIWIGO_RELEASE=$(cat /version.txt)
-	curl -o /tmp/piwigo.zip -L "http://piwigo.org/download/dlcounter.php?code=${PIWIGO_RELEASE}"
-	unzip -q /tmp/piwigo.zip  -d /tmp
+	unzip -q /piwigo/piwigo.zip  -d /tmp
 	mv /tmp/piwigo/* /config/www/gallery
-	rm -rf /tmp/piwigo /tmp/piwigo.zip
+	rm -rf /tmp/piwigo
 fi
 
 # copy config

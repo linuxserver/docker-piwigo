@@ -35,12 +35,15 @@ RUN \
 	re2c \
 	unzip \
 	wget && \
- echo "**** set version tag ****" && \
+ echo "**** download piwigo ****" && \
  if [ -z ${PIWIGO_RELEASE+x} ]; then \
 	PIWIGO_RELEASE=$(curl -sX GET "https://api.github.com/repos/Piwigo/Piwigo/releases/latest" \
 	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
- echo ${PIWIGO_RELEASE} > /version.txt
+ mkdir /piwigo && \
+ curl -o \
+ 	/piwigo/piwigo.zip -L \
+	 "http://piwigo.org/download/dlcounter.php?code=${PIWIGO_RELEASE}"
 
 # copy local files
 COPY root/ /
