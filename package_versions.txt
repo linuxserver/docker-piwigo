@@ -18,14 +18,14 @@ curl-7.65.1-r0
 db-5.3.28-r1
 dbus-libs-1.12.16-r0
 exiftool-11.45-r0
-expat-2.2.7-r0
+expat-2.2.7-r1
 ffmpeg-4.1.4-r0
 ffmpeg-libs-4.1.4-r0
 fontconfig-2.13.1-r0
 freetype-2.10.0-r0
 fribidi-1.0.5-r1
 gdk-pixbuf-2.38.1-r0
-ghostscript-9.27-r2
+ghostscript-9.27-r4
 git-2.22.0-r0
 git-perl-2.22.0-r0
 glib-2.60.4-r0
@@ -47,7 +47,7 @@ libbsd-0.9.1-r0
 libbz2-1.0.6-r7
 libc-utils-0.7.1-r0
 libcroco-0.6.13-r1
-libcrypto1.1-1.1.1c-r0
+libcrypto1.1-1.1.1d-r0
 libcurl-7.65.1-r0
 libde265-1.0.3-r0
 libdrm-2.4.98-r0
@@ -74,7 +74,7 @@ libressl2.7-libssl-2.7.5-r0
 librsvg-2.40.20-r0
 libsasl-2.1.27-r3
 libsm-1.2.3-r0
-libssl1.1-1.1.1c-r0
+libssl1.1-1.1.1d-r0
 libstdc++-8.3.0-r0
 libtasn1-4.14-r0
 libtheora-1.1.1-r14
