@@ -149,8 +149,8 @@ php7-xmlrpc-7.3.9-r0
 php7-xmlwriter-7.3.9-r0
 php7-xsl-7.3.9-r0
 pixman-0.38.4-r0
-poppler-0.71.0-r0
-poppler-utils-0.71.0-r0
+poppler-0.71.0-r1
+poppler-utils-0.71.0-r1
 popt-1.16-r7
 re2c-1.1.1-r0
 readline-8.0.0-r0
