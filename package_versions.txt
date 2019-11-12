@@ -23,7 +23,7 @@ ffmpeg-4.1.4-r0
 ffmpeg-libs-4.1.4-r0
 fontconfig-2.13.1-r0
 freetype-2.10.0-r0
-fribidi-1.0.5-r1
+fribidi-1.0.5-r2
 gdk-pixbuf-2.38.1-r0
 ghostscript-9.27-r4
 git-2.22.0-r0
