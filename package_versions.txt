@@ -9,14 +9,14 @@ argon2-libs-20190702-r1
 avahi-libs-0.7-r4
 bash-5.0.11-r1
 busybox-1.31.1-r9
-ca-certificates-20191127-r1
-ca-certificates-cacert-20191127-r1
+ca-certificates-20191127-r2
+ca-certificates-cacert-20191127-r2
 cairo-1.16.0-r2
 coreutils-8.31-r0
 cups-libs-2.2.12-r1
 curl-7.67.0-r0
 db-5.3.28-r1
-dbus-libs-1.12.16-r2
+dbus-libs-1.12.16-r3
 exiftool-11.79-r0
 expat-2.2.9-r1
 ffmpeg-4.2.1-r3
