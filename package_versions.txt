@@ -59,8 +59,8 @@ libgpg-error-1.36-r2
 libheif-1.6.0-r0
 libice-1.0.10-r0
 libintl-0.20.1-r2
-libjpeg-turbo-2.0.4-r0
-libjpeg-turbo-utils-2.0.4-r0
+libjpeg-turbo-2.0.4-r1
+libjpeg-turbo-utils-2.0.4-r1
 libldap-2.4.48-r2
 libltdl-2.4.6-r7
 libmagic-5.37-r1
@@ -119,7 +119,7 @@ p11-kit-0.23.18.1-r0
 pango-1.44.7-r0
 pcre-8.43-r0
 pcre2-10.34-r1
-perl-5.30.1-r0
+perl-5.30.3-r0
 perl-error-0.17028-r0
 perl-git-2.24.3-r0
 perl-image-exiftool-11.79-r0
