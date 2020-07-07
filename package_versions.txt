@@ -31,7 +31,7 @@ gdk-pixbuf-2.40.0-r2
 ghostscript-9.52-r0
 git-2.26.2-r0
 git-perl-2.26.2-r0
-glib-2.64.3-r0
+glib-2.64.4-r0
 gmp-6.2.0-r0
 gnutls-3.6.14-r0
 graphite2-1.3.14-r0
@@ -76,7 +76,7 @@ libpng-1.6.37-r1
 libproc-3.3.16-r0
 libressl3.1-libcrypto-3.1.2-r0
 libressl3.1-libssl-3.1.2-r0
-librsvg-2.48.7-r0
+librsvg-2.48.8-r0
 libsasl-2.1.27-r6
 libsm-1.2.3-r0
 libssh-0.9.4-r0
