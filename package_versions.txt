@@ -79,7 +79,7 @@ libressl3.1-libssl-3.1.2-r0
 librsvg-2.48.8-r0
 libsasl-2.1.27-r6
 libsm-1.2.3-r0
-libssh-0.9.4-r0
+libssh-0.9.4-r1
 libssl1.1-1.1.1g-r0
 libstdc++-9.3.0-r2
 libtasn1-4.16.0-r1
