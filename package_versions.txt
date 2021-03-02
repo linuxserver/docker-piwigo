@@ -17,7 +17,7 @@ cairo-1.16.0-r2
 cairo-gobject-1.16.0-r2
 coreutils-8.32-r2
 cups-libs-2.3.3-r1
-curl-7.74.0-r0
+curl-7.74.0-r1
 dbus-libs-1.12.20-r1
 exiftool-12.12-r0
 expat-2.2.10-r1
@@ -51,7 +51,7 @@ libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
 libcrypto1.1-1.1.1j-r0
-libcurl-7.74.0-r0
+libcurl-7.74.0-r1
 libdav1d-0.8.1-r0
 libde265-1.0.4-r0
 libdrm-2.4.104-r0
@@ -67,7 +67,7 @@ libidn2-2.3.0-r0
 libintl-0.20.2-r2
 libjpeg-turbo-2.0.6-r0
 libjpeg-turbo-utils-2.0.6-r0
-libldap-2.4.57-r0
+libldap-2.4.57-r1
 libltdl-2.4.6-r7
 libmagic-5.39-r0
 libmediainfo-20.09-r0
