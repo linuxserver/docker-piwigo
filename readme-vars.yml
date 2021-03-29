@@ -38,6 +38,8 @@ app_setup_block: "* You must create a user and database for piwigo to use in a m
 
 * The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc."
 
+* When setting up a volume from your NAS to your docker instance.  If you would like to store photos on the NAS and use ftp-sync instead of web-upload, you should create a 'photos' folder in '/config/www/gallery/galleries/'.  The photos folder can then be symlinked to the shared volume folder using the command i.e. `ln -s /pictures/2021 2021`
+
 app_setup_nginx_reverse_proxy_snippet: false
 app_setup_nginx_reverse_proxy_block: ""
 
