@@ -2,19 +2,24 @@
 
 # make our folders
 mkdir -p \
-	/config/www/gallery
+	/gallery
 
 # install piwigo
-if [ ! -f "/config/www/gallery/index.php" ]; then
+if [ ! -f "/config/www/gallery/index.php" ] && [ ! -f "/gallery/index.php" ]; then
 	unzip -q /piwigo/piwigo.zip  -d /tmp
-	mv /tmp/piwigo/* /config/www/gallery
+	mv /tmp/piwigo/* /gallery
 	rm -rf /tmp/piwigo
 fi
 
 # copy config
-[[ ! -f "/config/www/gallery/local/config/config.inc.php" ]] && \
-	cp /config/www/gallery/include/config_default.inc.php \
-	/config/www/gallery/local/config/config.inc.php
+if [ ! -f "/config/www/gallery/local/config/config.inc.php" ] && [ ! -f "/gallery/local/config/config.inc.php" ]; then
+	cp /gallery/include/config_default.inc.php /gallery/local/config/config.inc.php
+fi
+
+
+if [ ! -d "/config/www/gallery" ]; then
+  ln -s /gallery /config/www/gallery
+fi
 
 # permissions
 chown -R abc:abc \

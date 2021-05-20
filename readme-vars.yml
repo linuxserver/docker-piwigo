@@ -22,6 +22,7 @@ param_env_vars:
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Configuration files." }
+  - { vol_path: "/gallery", vol_host_path: "</path/to/appdata/gallery>", desc: "Image, plugin, & theme storage for Piwigo" }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "80", internal_port: "80", port_desc: "Application WebUI" }
@@ -43,6 +44,7 @@ app_setup_nginx_reverse_proxy_block: ""
 
 # changelog
 changelogs:
+  - { date: "20.05.21:", desc: "Create separate volume for image data" }
   - { date: "23.01.21:", desc: "Rebasing to alpine 3.13." }
   - { date: "12.12.20:", desc: "Increased upload_max_filesize in php.ini" }
   - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
