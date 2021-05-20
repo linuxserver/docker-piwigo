@@ -29,7 +29,9 @@ param_ports:
 
 # application setup block
 app_setup_block_enabled: true
-app_setup_block: "* You must create a user and database for piwigo to use in a mysql/mariadb server. 
+app_setup_block: "Docker image update and recreation of container alone won't update Piwigo version. In order to update Piwigo version, firstly make sure you are using the latest docker image, then go to Admin->Tools->Updates and use the app updater.
+
+* You must create a user and database for piwigo to use in a mysql/mariadb server. 
 
 * In the setup page for database, use the ip address rather than hostname. 
 
