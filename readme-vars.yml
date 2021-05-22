@@ -22,13 +22,16 @@ param_env_vars:
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Configuration files." }
+  - { vol_path: "/gallery", vol_host_path: "</path/to/appdata/gallery>", desc: "Image, plugin, & theme storage for Piwigo" }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "80", internal_port: "80", port_desc: "Application WebUI" }
 
 # application setup block
 app_setup_block_enabled: true
-app_setup_block: "* You must create a user and database for piwigo to use in a mysql/mariadb server. 
+app_setup_block: "Docker image update and recreation of container alone won't update Piwigo version. In order to update Piwigo version, firstly make sure you are using the latest docker image, then go to Admin->Tools->Updates and use the app updater.
+
+* You must create a user and database for piwigo to use in a mysql/mariadb server. 
 
 * In the setup page for database, use the ip address rather than hostname. 
 
@@ -43,6 +46,7 @@ app_setup_nginx_reverse_proxy_block: ""
 
 # changelog
 changelogs:
+  - { date: "20.05.21:", desc: "Create separate volume for image data" }
   - { date: "23.01.21:", desc: "Rebasing to alpine 3.13." }
   - { date: "12.12.20:", desc: "Increased upload_max_filesize in php.ini" }
   - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
