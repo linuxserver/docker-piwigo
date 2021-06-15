@@ -17,7 +17,7 @@ cairo-1.16.0-r2
 cairo-gobject-1.16.0-r2
 coreutils-8.32-r2
 cups-libs-2.3.3-r1
-curl-7.77.0-r0
+curl-7.77.0-r1
 dbus-libs-1.12.20-r1
 exiftool-12.25-r0
 expat-2.2.10-r1
@@ -51,7 +51,7 @@ libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
 libcrypto1.1-1.1.1k-r0
-libcurl-7.77.0-r0
+libcurl-7.77.0-r1
 libdav1d-0.8.1-r0
 libde265-1.0.4-r0
 libdrm-2.4.104-r0
@@ -113,7 +113,7 @@ logrotate-3.18.0-r0
 lynx-2.8.9_p1-r1
 mediainfo-20.09-r0
 musl-1.2.2-r1
-musl-utils-1.2.2-r0
+musl-utils-1.2.2-r1
 nano-5.4-r1
 ncurses-libs-6.2_p20210109-r0
 ncurses-terminfo-base-6.2_p20210109-r0
