@@ -43,7 +43,7 @@ RUN \
   mkdir /piwigo && \
   curl -o \
     /piwigo/piwigo.zip -L \
-    "http://piwigo.org/download/dlcounter.php?code=${PIWIGO_RELEASE}" && \
+    "https://piwigo.org/download/dlcounter.php?code=${PIWIGO_RELEASE}" && \
   # The max filesize is 2M by default, which is way to small for most photos
   sed -ri 's/^upload_max_filesize = .*/upload_max_filesize = 100M/' /etc/php7/php.ini && \
   # The max post size is 8M by default, it must be at least max_filesize
