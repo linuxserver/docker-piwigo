@@ -31,6 +31,7 @@ RUN \
     php7-pear \
     php7-xmlrpc \
     php7-xsl \
+    php7-zip \
     poppler-utils \
     re2c \
     unzip \
