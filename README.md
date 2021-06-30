@@ -230,6 +230,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **29.06.21:** - Rebase to 3.14, Add php7-zip package
 * **20.05.21:** - Create separate volume for image data
 * **23.01.21:** - Rebasing to alpine 3.13.
 * **12.12.20:** - Increased upload_max_filesize in php.ini
