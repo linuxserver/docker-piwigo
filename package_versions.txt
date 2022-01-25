@@ -11,8 +11,8 @@ avahi-libs-0.8-r5
 bash-5.1.4-r0
 brotli-libs-1.0.9-r5
 busybox-1.33.1-r6
-ca-certificates-20191127-r5
-ca-certificates-bundle-20191127-r5
+ca-certificates-20211220-r0
+ca-certificates-bundle-20211220-r0
 cairo-1.16.0-r3
 cairo-gobject-1.16.0-r3
 coreutils-8.32-r2
