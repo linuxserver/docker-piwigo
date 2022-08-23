@@ -17,7 +17,7 @@ server {
         #auth_basic "Restricted";
         #auth_basic_user_file /config/nginx/.htpasswd;
 
-        try_files $uri $uri/ /index.html /index.php?$args =404;
+        try_files $uri $uri/ /index.html /index.php$is_args$args =404;
     }
 
     location ~ ^(.+\.php)(.*)$ {
