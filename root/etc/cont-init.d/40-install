@@ -8,7 +8,7 @@ mkdir -p \
 if [ ! -f "/config/www/gallery/index.php" ] && [ ! -f "/gallery/index.php" ]; then
     unzip -q /piwigo/piwigo.zip  -d /tmp
     # NFS volumes and chmod dont mix. We disable the chmods.
-    find /tmp/piwigo -type f -name "*.php" -print0 | xargs -0 sed -i -e 's/@chmod/true || @chmod/g'
+    find /tmp/piwigo -type f -name "*.php" -print0 | xargs -0 sed -i -e 's/@\?chmod\s*(/true || chmod(/g'
     mv /tmp/piwigo/* /gallery
     rm -rf /tmp/piwigo
 fi
