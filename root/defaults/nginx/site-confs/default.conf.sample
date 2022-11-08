@@ -9,7 +9,7 @@ server {
 
     server_name _;
 
-    root /config/www/gallery;
+    root /app/www/public;
     index index.html index.htm index.php;
 
     location / {

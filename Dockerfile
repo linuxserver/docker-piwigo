@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.15
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.16
 
 # set version label
 ARG BUILD_DATE
@@ -10,7 +10,6 @@ LABEL maintainer="sparklyballs"
 RUN \
   echo "**** install packages ****" && \
   apk add --no-cache --upgrade \
-    curl \
     exiftool \
     ffmpeg \
     imagemagick \
@@ -43,10 +42,12 @@ RUN \
     PIWIGO_RELEASE=$(curl -sX GET "https://api.github.com/repos/Piwigo/Piwigo/releases/latest" \
     | awk '/tag_name/{print $4;exit}' FS='[""]'); \
   fi && \
-  mkdir /piwigo && \
+  mkdir -p /app/www/public && \
   curl -o \
-    /piwigo/piwigo.zip -L \
+    /tmp/piwigo.zip -L \
     "https://piwigo.org/download/dlcounter.php?code=${PIWIGO_RELEASE}" && \
+  unzip -q /tmp/piwigo.zip -d /tmp && \
+  mv /tmp/piwigo/* /app/www/public && \
   # The max filesize is 2M by default, which is way to small for most photos
   sed -ri 's/^upload_max_filesize = .*/upload_max_filesize = 100M/' /etc/php8/php.ini && \
   # The max post size is 8M by default, it must be at least max_filesize

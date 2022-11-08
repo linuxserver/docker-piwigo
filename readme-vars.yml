@@ -21,31 +21,24 @@ param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Configuration files." }
-  - { vol_path: "/gallery", vol_host_path: "</path/to/appdata/gallery>", desc: "Image, plugin, & theme storage for Piwigo" }
+  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Configuration files." }
+  - { vol_path: "/gallery", vol_host_path: "/path/to/appdata/gallery", desc: "Image storage for Piwigo" }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "80", internal_port: "80", port_desc: "Application WebUI" }
 
 # application setup block
 app_setup_block_enabled: true
-app_setup_block: "Docker image update and recreation of container alone won't update Piwigo version. In order to update Piwigo version, firstly make sure you are using the latest docker image, then go to Admin->Tools->Updates and use the app updater.
+app_setup_block: |
+  * You must create a user and database for piwigo to use in a mysql/mariadb server. 
 
-* You must create a user and database for piwigo to use in a mysql/mariadb server. 
+  * Self-signed keys are generated the first time you run the container and can be found in `/config/keys`, if needed, you can replace them with your own.
 
-* In the setup page for database, use the ip address rather than hostname. 
-
-* A basic nginx configuration file can be found in `/config/nginx/site-confs`, edit the file to enable ssl (port 443 by default), set servername etc.
-
-* Self-signed keys are generated the first time you run the container and can be found in `/config/keys`, if needed, you can replace them with your own.
-
-* The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc."
-
-app_setup_nginx_reverse_proxy_snippet: false
-app_setup_nginx_reverse_proxy_block: ""
+  * The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc."
 
 # changelog
 changelogs:
+  - { date: "08.11.22:", desc: "Rebase to Alpine 3.16, migrate to s6v3. Move application install to /app/www/public, add migration for existing users. Container updates should now update the application correctly." }
   - { date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))." }
   - { date: "29.06.21:", desc: "Rebase to 3.14, Add php7-zip package" }
   - { date: "20.05.21:", desc: "Create separate volume for image data" }

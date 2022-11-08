@@ -1,0 +1,64 @@
+#!/usr/bin/with-contenv bash
+
+# make our folders
+mkdir -p \
+    /config/www/piwigo/_data \
+    /gallery/upload
+
+# Migrate old data
+if [[ -f /gallery/index.php ]]; then
+    echo "*******************************************************************************"
+    echo ""
+    echo "Migrating old install..."
+    mv /gallery/_data/ /config/www/piwigo/_data
+    mv /gallery/language/ /config/www/piwigo/language
+    mv /gallery/plugins/ /config/www/piwigo/plugins
+    mv /gallery/themes/ /config/www/piwigo/themes
+    mv /gallery/local/ /config/www/piwigo/local
+    rm /gallery/index.php
+    rm /config/www/gallery
+    sed -i "s|root /config/www/gallery;|root /app/www/public;|" /config/nginx/site-confs/default.conf
+    echo "Migration completed."
+    echo "You can now safely delete everything in /gallery *except* for the upload folder"
+    echo ""
+    echo "*******************************************************************************"
+fi
+
+rm -rf /app/www/public/upload
+ln -s /gallery/upload /app/www/public/upload
+rm -rf /app/www/public/_data
+ln -s /config/www/piwigo/_data /app/www/public/_data
+
+shopt -s globstar dotglob
+
+symlinks=( \
+/app/www/public/language \
+/app/www/public/plugins \
+/app/www/public/local \
+/app/www/public/themes \
+)
+
+for i in "${symlinks[@]}"; do
+if [[ -d /config/www/piwigo/"$(basename "$i")" && ! -L "$i"  ]]; then
+    rm -rf "$i"
+fi
+if [[ ! -d /config/www/piwigo/"$(basename "$i")" && ! -L "$i"  ]]; then
+    mv "$i" /config/www/piwigo/
+fi
+if [[ -d /config/www/piwigo/"$(basename "$i")" && ! -L "$i"  ]]; then
+    ln -s /config/www/piwigo/"$(basename "$i")" "$i"
+fi
+done
+
+shopt -u globstar dotglob
+
+# copy config
+if [[ ! -f "/config/www/piwigo/local/config/config.inc.php" ]]; then
+    cp /app/www/public/include/config_default.inc.php /config/www/piwigo/local/config/config.inc.php
+fi
+
+# permissions
+chown -R abc:abc \
+    /config \
+    /app \
+    /gallery
