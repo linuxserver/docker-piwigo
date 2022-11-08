@@ -2,7 +2,7 @@
 
 # make our folders
 mkdir -p \
-    /config/www/piwigo/_data \
+    /config/www/piwigo \
     /gallery/upload
 
 # Migrate old data
