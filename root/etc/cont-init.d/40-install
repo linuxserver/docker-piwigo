@@ -22,9 +22,9 @@ if [ ! -d "/config/www/gallery" ]; then
 fi
 
 if [[ -d /gallery ]]; then
-  if [[ "$(stat -c '%U' /gallery)" != "abc" ]]; then
-    chown -R abc:abc /gallery
-  fi
+    if [[ "$(stat -c '%U' /gallery)" != "abc" ]]; then
+        chown -R abc:abc /gallery
+    fi
 fi
 
 # permissions
