@@ -26,8 +26,6 @@ fi
 
 rm -rf /app/www/public/upload
 ln -s /gallery/upload /app/www/public/upload
-rm -rf /app/www/public/_data
-ln -s /config/www/piwigo/_data /app/www/public/_data
 
 shopt -s globstar dotglob
 
@@ -36,6 +34,7 @@ symlinks=( \
 /app/www/public/plugins \
 /app/www/public/local \
 /app/www/public/themes \
+/app/www/public/_data \
 )
 
 for i in "${symlinks[@]}"; do
