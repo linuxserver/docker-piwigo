@@ -7,7 +7,7 @@ mkdir -p \
     /gallery/galleries
 
 # Migrate old data
-if [[ -f /gallery/index.php ]]; then
+if [[ -f /config/www/gallery ]]; then
     echo "*******************************************************************************"
     echo ""
     echo "Migrating old install..."
