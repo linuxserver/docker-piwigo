@@ -5,7 +5,7 @@ ARG BUILD_DATE
 ARG VERSION
 ARG PIWIGO_RELEASE
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="sparklyballs"
+LABEL maintainer="thespad"
 
 RUN \
   echo "**** install packages ****" && \
