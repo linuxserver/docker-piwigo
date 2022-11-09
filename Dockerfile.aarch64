@@ -30,9 +30,7 @@ RUN \
     php8-xsl \
     php8-zip \
     poppler-utils \
-    re2c \
-    unzip \
-    wget && \
+    re2c && \
   apk add --no-cache \
     --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
     php8-pecl-xmlrpc && \
@@ -50,7 +48,10 @@ RUN \
   # The max filesize is 2M by default, which is way to small for most photos
   sed -ri 's/^upload_max_filesize = .*/upload_max_filesize = 100M/' /etc/php8/php.ini && \
   # The max post size is 8M by default, it must be at least max_filesize
-  sed -ri 's/^post_max_size = .*/post_max_size = 100M/' /etc/php8/php.ini
+  sed -ri 's/^post_max_size = .*/post_max_size = 100M/' /etc/php8/php.ini && \
+  echo "**** cleanup ****" && \
+  rm -rf \
+    /tmp/*
 
 # copy local files
 COPY root/ /
