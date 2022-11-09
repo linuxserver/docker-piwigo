@@ -14,7 +14,6 @@ RUN \
     ffmpeg \
     imagemagick \
     libjpeg-turbo-utils \
-    lynx \
     mediainfo \
     php8-apcu \
     php8-cgi \
