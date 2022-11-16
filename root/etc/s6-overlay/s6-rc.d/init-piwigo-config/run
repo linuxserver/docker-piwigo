@@ -27,11 +27,21 @@ if [[ -f /gallery/index.php ]]; then
     echo "*******************************************************************************"
 fi
 
-rm -rf /app/www/public/{upload,galleries}
-ln -s /gallery/upload /app/www/public/upload
-ln -s /gallery/galleries /app/www/public/galleries
-
 shopt -s globstar dotglob
+
+symlinks=( \
+/app/www/public/upload \
+/app/www/public/galleries \
+)
+
+for i in "${symlinks[@]}"; do
+if [[ -d /gallery/"$(basename "$i")" && ! -L "$i"  ]]; then
+    rm -rf "$i"
+fi
+if [[ -d /gallery/"$(basename "$i")" && ! -L "$i"  ]]; then
+    ln -s /gallery/"$(basename "$i")" "$i"
+fi
+done
 
 symlinks=( \
 /app/www/public/language \
