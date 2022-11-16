@@ -21,8 +21,8 @@ if [[ -f /gallery/index.php ]]; then
     sed -i "s|root /config/www/gallery;|root /app/www/public;|" /config/nginx/site-confs/default.conf
     echo "Migration completed."
     echo ""
-    echo "You can now safely delete everything in /gallery *except*"
-    echo "for the upload and galleries directories"
+    echo "You can now safely delete everything in /gallery *except* for the upload and"
+    echo "galleries directories. If your photos are stored elsewhere you can ignore this."
     echo ""
     echo "*******************************************************************************"
 fi
