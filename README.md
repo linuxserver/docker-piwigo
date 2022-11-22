@@ -60,12 +60,11 @@ The architectures supported by this image are:
 
 ## Application Setup
 
-Docker image update and recreation of container alone won't update Piwigo version. In order to update Piwigo version, firstly make sure you are using the latest docker image, then go to Admin->Tools->Updates and use the app updater.
-* You must create a user and database for piwigo to use in a mysql/mariadb server.
-* In the setup page for database, use the ip address rather than hostname.
-* A basic nginx configuration file can be found in `/config/nginx/site-confs`, edit the file to enable ssl (port 443 by default), set servername etc.
+* You must create a user and database for piwigo to use in a mysql/mariadb server. 
+
 * Self-signed keys are generated the first time you run the container and can be found in `/config/keys`, if needed, you can replace them with your own.
-* The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc.
+
+* The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc."
 
 ## Usage
 
@@ -85,8 +84,8 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - </path/to/appdata/config>:/config
-      - </path/to/appdata/gallery>:/gallery
+      - /path/to/appdata/config:/config
+      - /path/to/appdata/gallery:/gallery
     ports:
       - 80:80
     restart: unless-stopped
@@ -101,8 +100,8 @@ docker run -d \
   -e PGID=1000 \
   -e TZ=Europe/London \
   -p 80:80 \
-  -v </path/to/appdata/config>:/config \
-  -v </path/to/appdata/gallery>:/gallery \
+  -v /path/to/appdata/config:/config \
+  -v /path/to/appdata/gallery:/gallery \
   --restart unless-stopped \
   lscr.io/linuxserver/piwigo:latest
 ```
@@ -118,7 +117,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London. |
 | `-v /config` | Configuration files. |
-| `-v /gallery` | Image, plugin, & theme storage for Piwigo |
+| `-v /gallery` | Image storage for Piwigo |
 
 ## Environment variables from files (Docker secrets)
 
@@ -229,6 +228,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **08.11.22:** - Rebase to Alpine 3.16, migrate to s6v3. Move application install to /app/www/public, add migration for existing users. Container updates should now update the application correctly.
 * **20.08.22:** - Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base)).
 * **29.06.21:** - Rebase to 3.14, Add php7-zip package
 * **20.05.21:** - Create separate volume for image data
