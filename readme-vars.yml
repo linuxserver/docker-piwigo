@@ -38,6 +38,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "16.01.23:", desc: "Fix broken custom template persistence." }
   - { date: "08.11.22:", desc: "Rebase to Alpine 3.16, migrate to s6v3. Move application install to /app/www/public, add migration for existing users. Container updates should now update the application correctly." }
   - { date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))." }
   - { date: "29.06.21:", desc: "Rebase to 3.14, Add php7-zip package" }
