@@ -16,6 +16,7 @@ if [[ -f /gallery/index.php ]]; then
     mv /gallery/plugins/ /config/www/plugins
     mv /gallery/themes/ /config/www/themes
     mv /gallery/local/ /config/www/local
+    mv /gallery/template-extension/ /config/www/template-extension
     rm /gallery/index.php
     rm /config/www/gallery
     sed -i "s|root /config/www/gallery;|root /app/www/public;|" /config/nginx/site-confs/default.conf
@@ -49,6 +50,7 @@ symlinks=( \
 /app/www/public/local \
 /app/www/public/themes \
 /app/www/public/_data \
+/app/www/public/template-extension \
 )
 
 for i in "${symlinks[@]}"; do
