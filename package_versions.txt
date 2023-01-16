@@ -143,8 +143,8 @@ php8-ctype-8.0.27-r0
 php8-curl-8.0.27-r0
 php8-dom-8.0.27-r0
 php8-exif-8.0.27-r0
-php8-fileinfo-8.0.26-r0
-php8-fpm-8.0.26-r0
+php8-fileinfo-8.0.27-r0
+php8-fpm-8.0.27-r0
 php8-gd-8.0.27-r0
 php8-ldap-8.0.27-r0
 php8-mbstring-8.0.27-r0
@@ -155,10 +155,10 @@ php8-pear-8.0.27-r0
 php8-pecl-apcu-5.1.21-r0
 php8-pecl-imagick-3.7.0-r0
 php8-pecl-xmlrpc-1.0.0_rc3-r0
-php8-session-8.0.26-r0
-php8-simplexml-8.0.26-r0
+php8-session-8.0.27-r0
+php8-simplexml-8.0.27-r0
 php8-xml-8.0.27-r0
-php8-xmlwriter-8.0.26-r0
+php8-xmlwriter-8.0.27-r0
 php8-xsl-8.0.27-r0
 php8-zip-8.0.27-r0
 pixman-0.40.0-r4
