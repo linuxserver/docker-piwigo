@@ -19,7 +19,7 @@ cairo-gobject-1.17.4-r2
 cjson-1.7.15-r3
 coreutils-9.1-r0
 cups-libs-2.4.2-r0
-curl-7.83.1-r5
+curl-7.83.1-r6
 dbus-libs-1.14.4-r0
 exiftool-12.40-r0
 expat-2.5.0-r0
