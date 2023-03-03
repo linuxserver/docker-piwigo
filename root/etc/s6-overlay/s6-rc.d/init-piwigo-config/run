@@ -73,8 +73,7 @@ if [[ ! -f "/config/www/local/config/config.inc.php" ]]; then
     cp /app/www/public/include/config_default.inc.php /config/www/local/config/config.inc.php
 fi
 
-# permissions
+# permissions
 lsiown -R abc:abc \
     /config \
-    /app \
     /gallery
