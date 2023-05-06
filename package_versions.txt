@@ -16,7 +16,7 @@ brotli-libs             1.0.9-r9               apk
 busybox                 1.35.0                 binary  
 busybox                 1.35.0-r29             apk     
 busybox-binsh           1.35.0-r29             apk     
-ca-certificates         20220614-r4            apk     
+ca-certificates         20230506-r0            apk     
 ca-certificates-bundle  20220614-r4            apk     
 cairo                   1.17.6-r3              apk     
 cairo-gobject           1.17.6-r3              apk     
@@ -93,7 +93,7 @@ libsm                   1.2.3-r1               apk
 libsndfile              1.1.0-r2               apk     
 libsodium               1.0.18-r2              apk     
 libsrt                  1.5.1-r0               apk     
-libssh                  0.10.4-r0              apk     
+libssh                  0.10.5-r0              apk     
 libssl3                 3.0.8-r4               apk     
 libstdc++               12.2.1_git20220924-r4  apk     
 libtasn1                4.19.0-r0              apk     
@@ -167,7 +167,7 @@ php81-openssl           8.1.18-r0              apk
 php81-pear              8.1.18-r0              apk     
 php81-pecl-apcu         5.1.22-r0              apk     
 php81-pecl-imagick      3.7.0-r0               apk     
-php81-pecl-xmlrpc       1.0.0_rc3-r0           apk     
+php81-pecl-xmlrpc       1.0.0_rc3-r1           apk     
 php81-session           8.1.18-r0              apk     
 php81-simplexml         8.1.18-r0              apk     
 php81-xml               8.1.18-r0              apk     
