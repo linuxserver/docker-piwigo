@@ -59,7 +59,7 @@ libbsd                  0.11.7-r0              apk
 libbz2                  1.0.8-r4               apk     
 libc-utils              0.7.2-r3               apk     
 libcrypto3              3.0.8-r4               apk     
-libcurl                 8.0.1-r0               apk     
+libcurl                 8.1.0-r1               apk     
 libdav1d                1.0.0-r2               apk     
 libde265                1.0.11-r1              apk     
 libdrm                  2.4.114-r0             apk     
@@ -124,7 +124,7 @@ linux-pam               1.5.2-r1               apk
 logrotate               3.20.1-r3              apk     
 mbedtls                 2.28.3-r0              apk     
 mediainfo               22.09-r0               apk     
-musl                    1.2.3-r4               apk     
+musl                    1.2.3-r5               apk     
 musl-utils              1.2.3-r4               apk     
 nano                    7.0-r0                 apk     
 ncurses-libs            6.3_p20221119-r0       apk     
@@ -148,7 +148,7 @@ perl-error              0.17029-r1             apk
 perl-git                2.38.5-r0              apk     
 perl-image-exiftool     12.50-r0               apk     
 php-cli                 8.1.19                 binary  
-php-fpm                 8.1.18                 binary  
+php-fpm                 8.1.19                 binary  
 php81                   8.1.19-r0              apk     
 php81-cgi               8.1.19-r0              apk     
 php81-common            8.1.19-r0              apk     
@@ -156,8 +156,8 @@ php81-ctype             8.1.19-r0              apk
 php81-curl              8.1.19-r0              apk     
 php81-dom               8.1.19-r0              apk     
 php81-exif              8.1.19-r0              apk     
-php81-fileinfo          8.1.18-r0              apk     
-php81-fpm               8.1.18-r0              apk     
+php81-fileinfo          8.1.19-r0              apk     
+php81-fpm               8.1.19-r0              apk     
 php81-gd                8.1.19-r0              apk     
 php81-ldap              8.1.19-r0              apk     
 php81-mbstring          8.1.19-r0              apk     
@@ -168,10 +168,10 @@ php81-pear              8.1.19-r0              apk
 php81-pecl-apcu         5.1.22-r0              apk     
 php81-pecl-imagick      3.7.0-r0               apk     
 php81-pecl-xmlrpc       1.0.0_rc3-r1           apk     
-php81-session           8.1.18-r0              apk     
-php81-simplexml         8.1.18-r0              apk     
+php81-session           8.1.19-r0              apk     
+php81-simplexml         8.1.19-r0              apk     
 php81-xml               8.1.19-r0              apk     
-php81-xmlwriter         8.1.18-r0              apk     
+php81-xmlwriter         8.1.19-r0              apk     
 php81-xsl               8.1.19-r0              apk     
 php81-zip               8.1.19-r0              apk     
 pixman                  0.42.2-r0              apk     
