@@ -19,6 +19,8 @@ RUN \
     mediainfo \
     php81-apcu \
     php81-cgi \
+    php81-ctype \
+    php81-curl \
     php81-dom \
     php81-exif \
     php81-gd \
@@ -28,8 +30,11 @@ RUN \
     php81-pear \
     php81-pecl-imagick \
     php81-xsl \
+    php81-zip \
     poppler-utils \
     re2c && \
+  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    php81-pecl-xmlrpc && \
   echo "**** download piwigo ****" && \
   if [ -z ${PIWIGO_RELEASE+x} ]; then \
     PIWIGO_RELEASE=$(curl -sX GET "https://api.github.com/repos/Piwigo/Piwigo/releases/latest" \
