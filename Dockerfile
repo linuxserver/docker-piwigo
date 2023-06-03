@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.18
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.17
 
 # set version label
 ARG BUILD_DATE
@@ -17,17 +17,17 @@ RUN \
     imagemagick \
     libjpeg-turbo-utils \
     mediainfo \
-    php82-apcu \
-    php82-cgi \
-    php82-dom \
-    php82-exif \
-    php82-gd \
-    php82-ldap \
-    php82-mysqli \
-    php82-mysqlnd \
-    php82-pear \
-    php82-pecl-imagick \
-    php82-xsl \
+    php81-apcu \
+    php81-cgi \
+    php81-dom \
+    php81-exif \
+    php81-gd \
+    php81-ldap \
+    php81-mysqli \
+    php81-mysqlnd \
+    php81-pear \
+    php81-pecl-imagick \
+    php81-xsl \
     poppler-utils \
     re2c && \
   echo "**** download piwigo ****" && \
@@ -42,9 +42,9 @@ RUN \
   unzip -q /tmp/piwigo.zip -d /tmp && \
   mv /tmp/piwigo/* /app/www/public && \
   # The max filesize is 2M by default, which is way to small for most photos
-  sed -ri 's/^upload_max_filesize = .*/upload_max_filesize = 100M/' /etc/php82/php.ini && \
+  sed -ri 's/^upload_max_filesize = .*/upload_max_filesize = 100M/' /etc/php81/php.ini && \
   # The max post size is 8M by default, it must be at least max_filesize
-  sed -ri 's/^post_max_size = .*/post_max_size = 100M/' /etc/php82/php.ini && \
+  sed -ri 's/^post_max_size = .*/post_max_size = 100M/' /etc/php81/php.ini && \
   echo "**** cleanup ****" && \
   rm -rf \
     /tmp/*
