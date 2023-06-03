@@ -229,6 +229,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **03.06.23:** - Revert to Alpine 3.17 due to compatibility issues with php 8.2.
 * **25.05.23:** - Rebase to Alpine 3.18, deprecate armhf.
 * **20.01.23:** - Rebase to alpine 3.17 with php8.1.
 * **16.01.23:** - Fix broken custom template persistence.
