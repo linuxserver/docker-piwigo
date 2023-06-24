@@ -2,7 +2,7 @@ NAME                    VERSION                TYPE
 alpine-baselayout       3.4.0-r0               apk     
 alpine-baselayout-data  3.4.0-r0               apk     
 alpine-keys             2.4-r1                 apk     
-alpine-release          3.17.3-r0              apk     
+alpine-release          3.17.4-r0              apk     
 alsa-lib                1.2.8-r0               apk     
 aom-libs                3.5.0-r0               apk     
 apache2-utils           2.4.57-r0              apk     
@@ -22,7 +22,7 @@ cairo                   1.17.6-r3              apk
 cairo-gobject           1.17.6-r3              apk     
 cjson                   1.7.15-r3              apk     
 coreutils               9.1-r0                 apk     
-cups-libs               2.4.2-r2               apk     
+cups-libs               2.4.2-r3               apk     
 curl                    8.1.2-r0               apk     
 dbus-libs               1.14.8-r0              apk     
 exiftool                12.50-r0               apk     
