@@ -142,7 +142,7 @@ p11-kit                 0.24.1-r1              apk
 pango                   1.50.13-r0             apk   
 pcre                    8.45-r2                apk   
 pcre2                   10.42-r0               apk   
-perl                    5.36.0-r2              apk   
+perl                    5.36.2-r0              apk   
 perl-error              0.17029-r1             apk   
 perl-git                2.38.5-r0              apk   
 perl-image-exiftool     12.50-r0               apk   
