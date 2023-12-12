@@ -59,7 +59,7 @@ The architectures supported by this image are:
 
 ## Application Setup
 
-* You must create a user and database for piwigo to use in a mysql/mariadb server. 
+* You must create a user and database for piwigo to use in a mysql/mariadb server.
 
 * Self-signed keys are generated the first time you run the container and can be found in `/config/keys`, if needed, you can replace them with your own.
 
@@ -294,6 +294,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **12.12.23:** - Rebase to Alpine 3.18.
 * **03.06.23:** - Revert to Alpine 3.17 due to compatibility issues with php 8.2.
 * **25.05.23:** - Rebase to Alpine 3.18, deprecate armhf.
 * **20.01.23:** - Rebase to alpine 3.17 with php8.1.

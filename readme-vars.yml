@@ -29,7 +29,7 @@ param_ports:
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  * You must create a user and database for piwigo to use in a mysql/mariadb server. 
+  * You must create a user and database for piwigo to use in a mysql/mariadb server.
 
   * Self-signed keys are generated the first time you run the container and can be found in `/config/keys`, if needed, you can replace them with your own.
 
@@ -37,6 +37,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "12.12.23:", desc: "Rebase to Alpine 3.18." }
   - { date: "03.06.23:", desc: "Revert to Alpine 3.17 due to compatibility issues with php 8.2." }
   - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
   - { date: "20.01.23:", desc: "Rebase to alpine 3.17 with php8.1." }
