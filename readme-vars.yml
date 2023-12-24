@@ -20,7 +20,7 @@ param_env_vars:
   - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Configuration files." }
+  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
   - { vol_path: "/gallery", vol_host_path: "/path/to/appdata/gallery", desc: "Image storage for Piwigo" }
 param_usage_include_ports: true
 param_ports:
@@ -37,6 +37,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19 with php 8.3."}
   - { date: "12.12.23:", desc: "Rebase to Alpine 3.18." }
   - { date: "03.06.23:", desc: "Revert to Alpine 3.17 due to compatibility issues with php 8.2." }
   - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
