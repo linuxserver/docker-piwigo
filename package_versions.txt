@@ -184,7 +184,7 @@ linux-raw-sys                 0.3.7                  rust-crate
 log                           0.4.17                 rust-crate  
 logrotate                     3.21.0-r1              apk         
 maybe-rayon                   0.1.1                  rust-crate  
-mbedtls                       2.28.6-r0              apk         
+mbedtls                       2.28.7-r0              apk         
 mediainfo                     23.11-r0               apk         
 memchr                        2.5.0                  rust-crate  
 memoffset                     0.8.0                  rust-crate  
