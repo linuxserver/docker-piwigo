@@ -35,7 +35,7 @@ clap                          4.0.32                 rust-crate
 clap_complete                 4.0.7                  rust-crate  
 clap_derive                   4.0.21                 rust-crate  
 clap_lex                      0.3.0                  rust-crate  
-composer                      2.6.6                  binary      
+composer                      2.7.0                  binary      
 console                       0.15.5                 rust-crate  
 coreutils                     9.4-r2                 apk         
 coreutils-env                 9.4-r2                 apk         
@@ -304,7 +304,7 @@ thiserror                     1.0.40                 rust-crate
 thiserror-impl                1.0.40                 rust-crate  
 tiff                          4.6.0-r0               apk         
 tinyxml2                      9.0.0-r2               apk         
-tzdata                        2023d-r0               apk         
+tzdata                        2024a-r0               apk         
 unicode-ident                 1.0.8                  rust-crate  
 unicode-width                 0.1.10                 rust-crate  
 utmps-libs                    0.1.2.2-r0             apk         
