@@ -278,6 +278,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **02.03.24:** - Fix HEIC file format support.
 * **23.12.23:** - Rebase to Alpine 3.19 with php 8.3.
 * **12.12.23:** - Rebase to Alpine 3.18.
 * **03.06.23:** - Revert to Alpine 3.17 due to compatibility issues with php 8.2.
