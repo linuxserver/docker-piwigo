@@ -15,6 +15,7 @@ RUN \
     exiftool \
     ffmpeg \
     imagemagick \
+    imagemagick-heic \
     libjpeg-turbo-utils \
     mediainfo \
     php83-apcu \
