@@ -15,9 +15,6 @@ available_architectures:
 # container parameters
 common_param_env_vars_enabled: true #PGID, PUID, etc, you can set it to 'optional'
 param_container_name: "{{ project_name }}"
-param_usage_include_env: true
-param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London." }
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
@@ -37,6 +34,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
   - { date: "07.04.24:", desc: "Increase php workers to fix Android uploading in bulk"}
   - { date: "02.03.24:", desc: "Fix HEIC file format support."}
   - { date: "23.12.23:", desc: "Rebase to Alpine 3.19 with php 8.3."}
