@@ -2,7 +2,7 @@ NAME                    VERSION                TYPE
 alpine-baselayout       3.6.5-r0               apk       
 alpine-baselayout-data  3.6.5-r0               apk       
 alpine-keys             2.4-r1                 apk       
-alpine-release          3.20.2-r0              apk       
+alpine-release          3.20.3-r0              apk       
 alsa-lib                1.2.11-r0              apk       
 aom-libs                3.9.1-r0               apk       
 apache2-utils           2.4.62-r0              apk       
@@ -59,7 +59,7 @@ imagemagick-jxl         7.1.1.32-r2            apk
 imagemagick-libs        7.1.1.32-r2            apk       
 imagemagick-tiff        7.1.1.32-r2            apk       
 imagemagick-webp        7.1.1.32-r2            apk       
-imath                   3.1.11-r2              apk       
+imath                   3.1.12-r0              apk       
 jq                      1.7.1-r0               apk       
 lame-libs               3.100-r5               apk       
 lcms2                   2.16-r0                apk       
@@ -170,7 +170,7 @@ openexr-libopenexr      3.1.13-r1              apk
 openjpeg                2.5.2-r0               apk       
 openssl                 3.3.2-r0               apk       
 opus                    1.5.2-r0               apk       
-orc                     0.4.37-r0              apk       
+orc                     0.4.39-r0              apk       
 pcre                    8.45-r3                apk       
 pcre2                   10.43-r0               apk       
 perl                    5.38.2-r0              apk       
@@ -227,7 +227,7 @@ ssl_client              1.36.1-r29             apk
 tdb-libs                1.4.9-r1               apk       
 tiff                    4.6.0t-r0              apk       
 tinyxml2                10.0.0-r0              apk       
-tzdata                  2024a-r1               apk       
+tzdata                  2024b-r0               apk       
 utmps-libs              0.1.2.2-r1             apk       
 v4l-utils-libs          1.24.1-r1              apk       
 vidstab                 1.1.1-r0               apk       
