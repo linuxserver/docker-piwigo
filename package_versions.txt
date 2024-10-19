@@ -149,7 +149,7 @@ libzmq                  4.3.5-r2               apk
 lilv-libs               0.24.24-r1             apk       
 linux-pam               1.6.0-r0               apk       
 logrotate               3.21.0-r1              apk       
-mbedtls                 3.6.1-r0               apk       
+mbedtls                 3.6.2-r0               apk       
 mediainfo               24.04-r0               apk       
 mpg123-libs             1.32.6-r0              apk       
 musl                    1.2.5-r0               apk       
