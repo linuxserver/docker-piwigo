@@ -204,8 +204,8 @@ php83-xmlwriter         8.3.14-r0              apk
 php83-xsl               8.3.14-r0              apk       
 php83-zip               8.3.14-r0              apk       
 pixman                  0.43.2-r0              apk       
-poppler                 24.02.0-r1             apk       
-poppler-utils           24.02.0-r1             apk       
+poppler                 24.02.0-r2             apk       
+poppler-utils           24.02.0-r2             apk       
 popt                    1.19-r3                apk       
 procps-ng               4.0.4-r0               apk       
 rav1e-libs              0.7.1-r0               apk       
