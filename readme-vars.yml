@@ -6,23 +6,20 @@ project_url: "http://piwigo.org/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/piwigo-banner.png"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a photo gallery software for the web that comes with powerful features to publish and manage your collection of pictures."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # container parameters
 common_param_env_vars_enabled: true #PGID, PUID, etc, you can set it to 'optional'
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
-  - { vol_path: "/gallery", vol_host_path: "/path/to/appdata/gallery", desc: "Image storage for Piwigo" }
+  - {vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files"}
+  - {vol_path: "/gallery", vol_host_path: "/path/to/appdata/gallery", desc: "Image storage for Piwigo"}
 param_usage_include_ports: true
 param_ports:
-  - { external_port: "80", internal_port: "80", port_desc: "Application WebUI" }
-
+  - {external_port: "80", internal_port: "80", port_desc: "Application WebUI"}
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -31,37 +28,91 @@ app_setup_block: |
   * Self-signed keys are generated the first time you run the container and can be found in `/config/keys`, if needed, you can replace them with your own.
 
   * The easiest way to edit the configuration file is to enable local files editor from the plugins page and use it to configure email settings etc."
-
+# init diagram
+init_diagram: |
+  "piwigo:latest": {
+    docker-mods
+    base {
+      fix-attr +\nlegacy cont-init
+    }
+    docker-mods -> base
+    legacy-services
+    custom services
+    init-services -> legacy-services
+    init-services -> custom services
+    custom services -> legacy-services
+    legacy-services -> ci-service-check
+    init-migrations -> init-adduser
+    init-nginx-end -> init-config
+    init-os-end -> init-config
+    init-config -> init-config-end
+    init-piwigo-config -> init-config-end
+    init-os-end -> init-crontab-config
+    init-mods-end -> init-custom-files
+    base -> init-envfile
+    init-os-end -> init-folders
+    init-php -> init-keygen
+    base -> init-migrations
+    base -> init-mods
+    init-config-end -> init-mods
+    init-version-checks -> init-mods
+    init-mods -> init-mods-end
+    init-mods-package-install -> init-mods-end
+    init-mods -> init-mods-package-install
+    init-samples -> init-nginx
+    init-permissions -> init-nginx-end
+    base -> init-os-end
+    init-adduser -> init-os-end
+    init-envfile -> init-os-end
+    init-migrations -> init-os-end
+    init-keygen -> init-permissions
+    init-nginx -> init-php
+    init-nginx-end -> init-piwigo-config
+    init-folders -> init-samples
+    init-custom-files -> init-services
+    init-mods-end -> init-services
+    init-config-end -> init-version-checks
+    init-services -> svc-cron
+    svc-cron -> legacy-services
+    init-services -> svc-nginx
+    svc-nginx -> legacy-services
+    init-services -> svc-php-fpm
+    svc-php-fpm -> legacy-services
+  }
+  Base Images: {
+    "baseimage-alpine-nginx:3.20" <- "baseimage-alpine:3.20"
+  }
+  "piwigo:latest" <- Base Images
 # changelog
 changelogs:
-  - { date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
-  - { date: "07.04.24:", desc: "Increase php workers to fix Android uploading in bulk"}
-  - { date: "02.03.24:", desc: "Fix HEIC file format support."}
-  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19 with php 8.3."}
-  - { date: "12.12.23:", desc: "Rebase to Alpine 3.18." }
-  - { date: "03.06.23:", desc: "Revert to Alpine 3.17 due to compatibility issues with php 8.2." }
-  - { date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf." }
-  - { date: "20.01.23:", desc: "Rebase to alpine 3.17 with php8.1." }
-  - { date: "16.01.23:", desc: "Fix broken custom template persistence." }
-  - { date: "08.11.22:", desc: "Rebase to Alpine 3.16, migrate to s6v3. Move application install to /app/www/public, add migration for existing users. Container updates should now update the application correctly." }
-  - { date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))." }
-  - { date: "29.06.21:", desc: "Rebase to 3.14, Add php7-zip package" }
-  - { date: "20.05.21:", desc: "Create separate volume for image data" }
-  - { date: "23.01.21:", desc: "Rebasing to alpine 3.13." }
-  - { date: "12.12.20:", desc: "Increased upload_max_filesize in php.ini" }
-  - { date: "01.06.20:", desc: "Rebasing to alpine 3.12." }
-  - { date: "19.12.19:", desc: "Rebasing to alpine 3.11." }
-  - { date: "28.06.19:", desc: "Rebasing to alpine 3.10." }
-  - { date: "12.06.19:", desc: "Add ffmpeg and other deps as needed by popular plugins." }
-  - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
-  - { date: "01.03.19:", desc: "Add php-ctype & php-curl." }
-  - { date: "22.02.19:", desc: "Rebasing to alpine 3.9, add php-ldap." }
-  - { date: "28.01.19:", desc: "Rebase to alpine linux 3.8 , add pipeline logic and multi arch." }
-  - { date: "25.01.18:", desc: "Rebase to alpine linux 3.7." }
-  - { date: "25.05.17:", desc: "Rebase to alpine linux 3.6." }
-  - { date: "03.05.17:", desc: "Use repo pinning to better solve dependencies, use repo version of php7-imagick." }
-  - { date: "20.04.17:", desc: "Add php7-exif package, thanks iiska" }
-  - { date: "23.02.17:", desc: "Rebase to alpine linux 3.5 and nginx." }
-  - { date: "14.10.16:", desc: "Add version layer information." }
-  - { date: "10.09.16:", desc: "Add layer badges to README." }
-  - { date: "29.08.15:", desc: "Initial Release." }
+  - {date: "31.05.24:", desc: "Rebase to Alpine 3.20. Existing users should update their nginx confs to avoid http2 deprecation warnings."}
+  - {date: "07.04.24:", desc: "Increase php workers to fix Android uploading in bulk"}
+  - {date: "02.03.24:", desc: "Fix HEIC file format support."}
+  - {date: "23.12.23:", desc: "Rebase to Alpine 3.19 with php 8.3."}
+  - {date: "12.12.23:", desc: "Rebase to Alpine 3.18."}
+  - {date: "03.06.23:", desc: "Revert to Alpine 3.17 due to compatibility issues with php 8.2."}
+  - {date: "25.05.23:", desc: "Rebase to Alpine 3.18, deprecate armhf."}
+  - {date: "20.01.23:", desc: "Rebase to alpine 3.17 with php8.1."}
+  - {date: "16.01.23:", desc: "Fix broken custom template persistence."}
+  - {date: "08.11.22:", desc: "Rebase to Alpine 3.16, migrate to s6v3. Move application install to /app/www/public, add migration for existing users. Container updates should now update the application correctly."}
+  - {date: "20.08.22:", desc: "Rebasing to alpine 3.15 with php8. Restructure nginx configs ([see changes announcement](https://info.linuxserver.io/issues/2022-08-20-nginx-base))."}
+  - {date: "29.06.21:", desc: "Rebase to 3.14, Add php7-zip package"}
+  - {date: "20.05.21:", desc: "Create separate volume for image data"}
+  - {date: "23.01.21:", desc: "Rebasing to alpine 3.13."}
+  - {date: "12.12.20:", desc: "Increased upload_max_filesize in php.ini"}
+  - {date: "01.06.20:", desc: "Rebasing to alpine 3.12."}
+  - {date: "19.12.19:", desc: "Rebasing to alpine 3.11."}
+  - {date: "28.06.19:", desc: "Rebasing to alpine 3.10."}
+  - {date: "12.06.19:", desc: "Add ffmpeg and other deps as needed by popular plugins."}
+  - {date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag."}
+  - {date: "01.03.19:", desc: "Add php-ctype & php-curl."}
+  - {date: "22.02.19:", desc: "Rebasing to alpine 3.9, add php-ldap."}
+  - {date: "28.01.19:", desc: "Rebase to alpine linux 3.8 , add pipeline logic and multi arch."}
+  - {date: "25.01.18:", desc: "Rebase to alpine linux 3.7."}
+  - {date: "25.05.17:", desc: "Rebase to alpine linux 3.6."}
+  - {date: "03.05.17:", desc: "Use repo pinning to better solve dependencies, use repo version of php7-imagick."}
+  - {date: "20.04.17:", desc: "Add php7-exif package, thanks iiska"}
+  - {date: "23.02.17:", desc: "Rebase to alpine linux 3.5 and nginx."}
+  - {date: "14.10.16:", desc: "Add version layer information."}
+  - {date: "10.09.16:", desc: "Add layer badges to README."}
+  - {date: "29.08.15:", desc: "Initial Release."}
