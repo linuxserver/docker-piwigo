@@ -174,7 +174,7 @@ opus                    1.5.2-r0               apk
 orc                     0.4.40-r0              apk       
 pcre                    8.45-r3                apk       
 pcre2                   10.43-r0               apk       
-perl                    5.38.2-r0              apk       
+perl                    5.38.3-r0              apk       
 perl-error              0.17029-r2             apk       
 perl-git                2.45.3-r0              apk       
 perl-image-exiftool     12.80-r0               apk       
