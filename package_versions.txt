@@ -17,7 +17,7 @@ busybox-binsh           1.36.1-r29             apk
 c-ares                  1.33.1-r0              apk       
 ca-certificates         20241121-r1            apk       
 ca-certificates-bundle  20241121-r1            apk       
-cairo                   1.18.0-r0              apk       
+cairo                   1.18.4-r0              apk       
 catatonit               0.2.0-r0               apk       
 cjson                   1.7.18-r0              apk       
 composer                2.8.9                  binary    
