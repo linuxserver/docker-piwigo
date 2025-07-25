@@ -2,7 +2,7 @@ NAME                    VERSION                TYPE
 alpine-baselayout       3.6.5-r0               apk       
 alpine-baselayout-data  3.6.5-r0               apk       
 alpine-keys             2.4-r1                 apk       
-alpine-release          3.20.6-r0              apk       
+alpine-release          3.20.7-r0              apk       
 alsa-lib                1.2.11-r0              apk       
 aom-libs                3.9.1-r0               apk       
 apache2-utils           2.4.64-r0              apk       
@@ -15,8 +15,8 @@ brotli-libs             1.1.0-r2               apk
 busybox                 1.36.1-r29             apk       
 busybox-binsh           1.36.1-r29             apk       
 c-ares                  1.33.1-r0              apk       
-ca-certificates         20241121-r1            apk       
-ca-certificates-bundle  20241121-r1            apk       
+ca-certificates         20250619-r0            apk       
+ca-certificates-bundle  20250619-r0            apk       
 cairo                   1.18.4-r0              apk       
 catatonit               0.2.0-r0               apk       
 cjson                   1.7.18-r0              apk       
@@ -150,7 +150,7 @@ libzmq                  4.3.5-r2               apk
 lilv-libs               0.24.24-r1             apk       
 linux-pam               1.6.0-r0               apk       
 logrotate               3.21.0-r1              apk       
-mbedtls                 3.6.3-r0               apk       
+mbedtls                 3.6.4-r0               apk       
 mediainfo               24.04-r0               apk       
 mpg123-libs             1.32.8-r0              apk       
 musl                    1.2.5-r1               apk       
