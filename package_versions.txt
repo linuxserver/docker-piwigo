@@ -21,7 +21,7 @@ ca-certificates-bundle  20250619-r0       apk
 cairo                   1.18.4-r0         apk       
 catatonit               0.2.0-r0          apk       
 cjson                   1.7.18-r0         apk       
-composer                2.8.10            binary    
+composer                2.8.11            binary    
 coreutils               9.5-r2            apk       
 coreutils-env           9.5-r2            apk       
 coreutils-fmt           9.5-r2            apk       
