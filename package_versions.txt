@@ -3,7 +3,7 @@ acl-libs                2.3.2-r1          apk
 alpine-baselayout       3.6.8-r1          apk       
 alpine-baselayout-data  3.6.8-r1          apk       
 alpine-keys             2.5-r0            apk       
-alpine-release          3.21.4-r0         apk       
+alpine-release          3.21.5-r0         apk       
 alsa-lib                1.2.12-r0         apk       
 aom-libs                3.11.0-r0         apk       
 apache2-utils           2.4.65-r0         apk       
@@ -150,7 +150,7 @@ libzmq                  4.3.5-r2          apk
 lilv-libs               0.24.24-r1        apk       
 linux-pam               1.6.1-r1          apk       
 logrotate               3.21.0-r1         apk       
-mbedtls                 3.6.4-r0          apk       
+mbedtls                 3.6.5-r0          apk       
 mediainfo               24.11-r0          apk       
 mpg123-libs             1.32.9-r0         apk       
 musl                    1.2.5-r9          apk       
