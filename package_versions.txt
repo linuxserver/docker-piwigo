@@ -15,7 +15,7 @@ bash                    5.2.37-r0         apk
 brotli-libs             1.1.0-r2          apk       
 busybox                 1.37.0-r14        apk       
 busybox-binsh           1.37.0-r14        apk       
-c-ares                  1.34.5-r0         apk       
+c-ares                  1.34.6-r0         apk       
 ca-certificates         20250911-r0       apk       
 ca-certificates-bundle  20250911-r0       apk       
 cairo                   1.18.4-r0         apk       
@@ -229,7 +229,7 @@ ssl_client              1.37.0-r14        apk
 tdb-libs                1.4.12-r0         apk       
 tiff                    4.7.1-r0          apk       
 tinyxml2                10.0.0-r0         apk       
-tzdata                  2025b-r0          apk       
+tzdata                  2025c-r0          apk       
 utmps-libs              0.1.2.3-r2        apk       
 v4l-utils-libs          1.28.1-r1         apk       
 vidstab                 1.1.1-r0          apk       
