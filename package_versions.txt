@@ -21,7 +21,7 @@ ca-certificates-bundle  20250911-r0       apk
 cairo                   1.18.4-r0         apk       
 catatonit               0.2.0-r0          apk       
 cjson                   1.7.19-r0         apk       
-composer                2.9.2             binary    
+composer                2.9.3             binary    
 coreutils               9.5-r2            apk       
 coreutils-env           9.5-r2            apk       
 coreutils-fmt           9.5-r2            apk       
@@ -116,7 +116,7 @@ libsasl                 2.1.28-r8         apk
 libsharpyuv             1.4.0-r0          apk       
 libsm                   1.2.4-r4          apk       
 libsndfile              1.2.2-r2          apk       
-libsodium               1.0.20-r0         apk       
+libsodium               1.0.20-r1         apk       
 libsrt                  1.5.3-r0          apk       
 libssh                  0.11.1-r0         apk       
 libssl3                 3.3.5-r0          apk       
