@@ -45,6 +45,12 @@ for i in "${symlinks[@]}"; do
     fi
 done
 
+# Update standard pages & default theme
+if [[ -d /config/www/themes ]]; then
+    mv -f /app/www/public/themes/standard_pages/ /config/www/themes/
+    mv -f /app/www/public/themes/default/ /config/www/themes/
+fi
+
 symlinks=(
     /app/www/public/language
     /app/www/public/plugins
