@@ -43,7 +43,7 @@ clap_complete           4.4.6                 rust-crate
 clap_derive             4.4.7                 rust-crate    
 clap_lex                0.6.0                 rust-crate    
 colorchoice             1.0.0                 rust-crate    
-composer                2.9.4                 binary        
+composer                2.9.5                 binary        
 console                 0.15.8                rust-crate    
 coreutils               9.7-r1                apk           
 coreutils-env           9.7-r1                apk           
@@ -121,7 +121,7 @@ libbsd                  0.12.2-r0             apk
 libbz2                  1.0.8-r6              apk           
 libc                    0.2.155               rust-crate    
 libc                    0.2.172               rust-crate    
-libcrypto3              3.5.4-r0              apk           
+libcrypto3              3.5.5-r0              apk           
 libcurl                 8.14.1-r2             apk           
 libdav1d                1.5.1-r0              apk           
 libde265                1.0.15-r1             apk           
@@ -135,7 +135,7 @@ libffi                  3.4.8-r0              apk
 libflac                 1.4.3-r1              apk           
 libgcc                  14.2.0-r6             apk           
 libgomp                 14.2.0-r6             apk           
-libheif                 1.19.8-r0             apk           
+libheif                 1.19.8-r1             apk           
 libhwy                  1.0.7-r1              apk           
 libice                  1.1.2-r0              apk           
 libidn2                 2.3.7-r0              apk           
@@ -165,7 +165,7 @@ libsndfile              1.2.2-r2              apk
 libsodium               1.0.20-r1             apk           
 libsrt                  1.5.3-r1              apk           
 libssh                  0.11.2-r0             apk           
-libssl3                 3.5.4-r0              apk           
+libssl3                 3.5.5-r0              apk           
 libstdc++               14.2.0-r6             apk           
 libtheora               1.1.1-r18             apk           
 libturbojpeg            3.1.0-r0              apk           
@@ -231,7 +231,7 @@ openexr-libilmthread    3.3.2-r0              apk
 openexr-libopenexr      3.3.2-r0              apk           
 openexr-libopenexrcore  3.3.2-r0              apk           
 openjpeg                2.5.3-r0              apk           
-openssl                 3.5.4-r0              apk           
+openssl                 3.5.5-r0              apk           
 opus                    1.5.2-r1              apk           
 orc                     0.4.40-r1             apk           
 paste                   1.0.14                rust-crate    
