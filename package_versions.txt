@@ -3,7 +3,7 @@ acl-libs                2.3.2-r1              apk
 alpine-baselayout       3.7.0-r0              apk           
 alpine-baselayout-data  3.7.0-r0              apk           
 alpine-keys             2.5-r0                apk           
-alpine-release          3.22.3-r0             apk           
+alpine-release          3.22.4-r0             apk           
 alsa-lib                1.2.14-r0             apk           
 anstream                0.6.8                 rust-crate    
 anstyle                 1.0.4                 rust-crate    
@@ -12,7 +12,7 @@ anstyle-query           1.0.2                 rust-crate
 anyhow                  1.0.79                rust-crate    
 anyhow                  1.0.98                rust-crate    
 aom-libs                3.12.1-r0             apk           
-apache2-utils           2.4.66-r0             apk           
+apache2-utils           2.4.67-r0             apk           
 apk-tools               2.14.9-r3             apk           
 apr                     1.7.5-r0              apk           
 apr-util                1.6.3-r1              apk           
@@ -31,8 +31,8 @@ brotli-libs             1.1.0-r2              apk
 busybox                 1.37.0-r20            apk           
 busybox-binsh           1.37.0-r20            apk           
 c-ares                  1.34.6-r0             apk           
-ca-certificates         20250911-r0           apk           
-ca-certificates-bundle  20250911-r0           apk           
+ca-certificates         20260413-r0           apk           
+ca-certificates-bundle  20260413-r0           apk           
 cairo                   1.18.4-r0             apk           
 catatonit               0.2.1-r0              apk           
 cfg-if                  1.0.0                 rust-crate    
@@ -314,7 +314,7 @@ thiserror-impl          1.0.56                rust-crate
 tiff                    4.7.1-r0              apk           
 tinyvec                 1.9.0                 rust-crate    
 tinyxml2                11.0.0-r0             apk           
-tzdata                  2026a-r0              apk           
+tzdata                  2026b-r0              apk           
 unicode-ident           1.0.12                rust-crate    
 unicode-width           0.1.11                rust-crate    
 utf8parse               0.2.1                 rust-crate    
@@ -332,5 +332,5 @@ xz-libs                 5.8.3-r0              apk
 y4m                     0.8.0                 rust-crate    
 zimg                    3.0.5-r3              apk           
 zix-libs                0.6.2-r0              apk           
-zlib                    1.3.1-r2              apk           
+zlib                    1.3.2-r0              apk           
 zstd-libs               1.5.7-r0              apk           
