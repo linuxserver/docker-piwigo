@@ -3,7 +3,7 @@ acl-libs                2.3.2-r1              apk
 alpine-baselayout       3.7.0-r0              apk           
 alpine-baselayout-data  3.7.0-r0              apk           
 alpine-keys             2.5-r0                apk           
-alpine-release          3.22.4-r0             apk           
+alpine-release          3.22.5-r0             apk           
 alsa-lib                1.2.14-r0             apk           
 anstream                0.6.8                 rust-crate    
 anstyle                 1.0.4                 rust-crate    
@@ -12,8 +12,8 @@ anstyle-query           1.0.2                 rust-crate
 anyhow                  1.0.79                rust-crate    
 anyhow                  1.0.98                rust-crate    
 aom-libs                3.12.1-r0             apk           
-apache2-utils           2.4.67-r0             apk           
-apk-tools               2.14.9-r3             apk           
+apache2-utils           2.4.68-r0             apk           
+apk-tools               2.14.10-r0            apk           
 apr                     1.7.5-r0              apk           
 apr-util                1.6.3-r1              apk           
 arg_enum_proc_macro     0.3.4                 rust-crate    
@@ -31,8 +31,8 @@ brotli-libs             1.1.0-r2              apk
 busybox                 1.37.0-r20            apk           
 busybox-binsh           1.37.0-r20            apk           
 c-ares                  1.34.6-r0             apk           
-ca-certificates         20260413-r0           apk           
-ca-certificates-bundle  20260413-r0           apk           
+ca-certificates         20260611-r0           apk           
+ca-certificates-bundle  20260611-r0           apk           
 cairo                   1.18.4-r0             apk           
 catatonit               0.2.1-r0              apk           
 cfg-if                  1.0.0                 rust-crate    
@@ -110,7 +110,7 @@ lame-libs               3.100-r5              apk
 lazy_static             1.4.0                 rust-crate    
 lcms2                   2.19-r0               apk           
 libSvtAv1Enc            2.3.0-r0              apk           
-libapk2                 2.14.9-r3             apk           
+libapk2                 2.14.10-r0            apk           
 libass                  0.17.3-r0             apk           
 libasyncns              0.8-r4                apk           
 libattr                 2.5.2-r2              apk           
