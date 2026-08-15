@@ -43,7 +43,7 @@ RUN \
   echo "**** download piwigo ****" && \
   if [ -z ${PIWIGO_RELEASE+x} ]; then \
     PIWIGO_RELEASE=$(curl -sX GET "https://api.github.com/repos/Piwigo/Piwigo/releases/latest" \
-    | awk '/tag_name/{print $4;exit}' FS='[""]'); \
+    | jq -r '.tag_name'); \
   fi && \
   mkdir -p /app/www/public && \
   curl -o \
