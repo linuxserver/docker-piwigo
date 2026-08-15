@@ -15,7 +15,7 @@ aom-libs                3.12.1-r0             apk
 apache2-utils           2.4.68-r0             apk           
 apk-tools               2.14.10-r0            apk           
 apr                     1.7.5-r0              apk           
-apr-util                1.6.3-r1              apk           
+apr-util                1.6.4-r0              apk           
 arg_enum_proc_macro     0.3.4                 rust-crate    
 argon2-libs             20190702-r5           apk           
 arrayvec                0.7.4                 rust-crate    
