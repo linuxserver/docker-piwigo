@@ -104,7 +104,7 @@ interpolate_name        0.2.4                 rust-crate
 itertools               0.10.5                rust-crate    
 itertools               0.12.0                rust-crate    
 ivf                     0.1.3                 rust-crate    
-jq                      1.8.1-r0              apk           
+jq                      1.8.2-r0              apk           
 lab                     0.11.0                rust-crate    
 lame-libs               3.100-r5              apk           
 lazy_static             1.4.0                 rust-crate    
@@ -171,7 +171,7 @@ libtheora               1.1.1-r18             apk
 libturbojpeg            3.1.0-r0              apk           
 libunibreak             6.1-r0                apk           
 libunistring            1.3-r0                apk           
-libuuid                 2.41-r9               apk           
+libuuid                 2.41.6-r1             apk           
 libva                   2.22.0-r1             apk           
 libvdpau                1.5-r4                apk           
 libvorbis               1.3.7-r2              apk           
@@ -328,7 +328,7 @@ wyz                     0.5.1                 rust-crate
 x264-libs               0.164.3108-r0         apk           
 x265-libs               3.6-r0                apk           
 xvidcore                1.3.7-r2              apk           
-xz-libs                 5.8.3-r0              apk           
+xz-libs                 5.8.4-r0              apk           
 y4m                     0.8.0                 rust-crate    
 zimg                    3.0.5-r3              apk           
 zix-libs                0.6.2-r0              apk           
